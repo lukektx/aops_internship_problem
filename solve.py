@@ -3,7 +3,7 @@ import sys
 # recursive function to solve a pyramid
 
 
-def solve(pyramid, target, side='L', row=0, pos=0, product=1):
+def solve(pyramid, target, side='', row=0, pos=0, product=1):
     # current product *= the position we're examining
     product *= pyramid[row][pos]
 
@@ -41,6 +41,6 @@ if __name__ == '__main__':
 
     # write solution to output.txt and print
     out_file = open('output.txt', 'w')
-    out_val = solve(pyramid, target_num)[1:]
+    out_val = solve(pyramid, target_num)
     print(out_val)
     out_file.write(out_val)
